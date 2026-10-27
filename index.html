@@ -4,91 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chess Board</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .board {
+        width: fit-content;
+        margin: 80px auto;
+        border: 2px solid #000;
+      }
+
+      .box1,
+      .box2 {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+      }
+      .box1 {
+        background-color: #fff;
+      }
+      .box2 {
+        background-color: #000;
+      }
+    </style>
   </head>
   <body>
-    <table border="1">
-      <tbody>
-        <tr>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td bgcolor="#fff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="board">
+      <div class="row">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </div>
+      <div class="row">
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="row">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </div>
+      <div class="row">
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="row">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </div>
+      <div class="row">
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="row">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </div>
+      <div class="row">
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+      </div>
+    </div>
   </body>
 </html>
